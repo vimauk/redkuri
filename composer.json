@@ -1,5 +1,6 @@
 {
     "name": "vima/redkuri",
+	"description": "A small PHP framework designed for Web Applications" 
     "autoload": {
         "psr-0": {
             "RedKuri\\": "src/"
@@ -8,11 +9,11 @@
     "authors": [
         {
             "name": "Anthony Fearn",
-            "email": "anthony.fearn@vima.uk"
+            "email": "anthony.fearn@vima.uk",
+			"homepage": "https://vima.uk"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
-	"php": ">=5.3.0"
+		"php": "^5.6 || ^7.0 || ^8.0"
     }
 }
