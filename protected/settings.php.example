@@ -1,0 +1,37 @@
+<?php
+
+use RedKuri as RK;
+
+define ('SYSTEM_DOWN', false);
+define ('SYSTEM_DOWN_MESSAGE', 'We are working on a few fixes and should be back shortly');
+
+define ('RK_APP_NAME', 'My Test App');
+define ('RK_APP_VERSION', '1.0');
+define ('RK_APP_TYPE', 'Dev');
+
+define ('FT_SMTP_HOST', 'smtp.gmail.com');
+define ('FT_SMTP_PORT', 587);
+define ('FT_SMTP_USERNAME', 'me@mydomain.com');
+define ('FT_SMTP_PASSWORD', 'kscoacjaodarrikdad');
+define ('FT_SMTP_FROM_ADDRESS', 'me@mydomain.com');
+define ('FT_SMTP_FROM', 'My App');
+
+define ('RK_DB_HOST', 'localhost');
+define ('RK_DB_USERNAME', 'dbuser');
+define ('RK_DB_PASSWORD', 'dbpassword');
+define ('RK_DB_DATABASE', 'dbname');
+
+define ('RK_PROTECTEDPATH', '/var/www/myapp/protected/');
+define ('RK_LIBRARYPATH', RK_PROTECTEDPATH.'/libraries/');
+define ('RK_BASEREALPATH', '/var/www/myapp/tests/');
+define ('RK_BASEPATH', '/');
+define ('RK_HOST', 'http://localhost:8000');
+define ('RK_REDKURIPATH', '/var/www/myapp/src/RedKuri/');
+
+define ('RK_LOG_LEVEL', 0);
+define ('ADMIN_LOG', true);
+
+define ('FT_BANTIME_MINS', 60);
+define ('FT_FIREWALL_BANNED', 8);
+define ('FT_FIREWALL_BAN_SEVERITY', 5);
+define ('FT_404_BAN_SEVERITY', 1);
