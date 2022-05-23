@@ -111,6 +111,7 @@ EOD;
 		if (strlen($this->f('password')->value()) < 8) {
 			$this->f('password')->setError('Minimum of 8 characters');
 		}
+		$this->f('error')->setMessage('Clicked');
 	}
 }
 

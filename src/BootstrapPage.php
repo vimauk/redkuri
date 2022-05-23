@@ -62,7 +62,7 @@ class BootstrapPage extends HTMLPage {
 HTML;
 	}
 
-	function renderRKError($part) {
+	function renderError($part) {
 		if ($part->message()) {
 			$error = '<div class="alert alert-danger alert-dismissible fade show" role="alert">';
 			$error .= '<strong>'.implode($part->message(), '<br/>').$part->message().'</strong>';
@@ -74,16 +74,16 @@ HTML;
 		return '';
 	}
 
-	function renderRKLabel($part) {
+	function renderLabel($part) {
 		if (strlen($part->label()) > 0) {
 			return '<label class="form-label" for="'.$part->name().'">'.$part->label().'</label>';
 		}
 		return '';
 	}
 	
-	function renderRKTextField($part) {
+	function renderTextField($part) {
 		if ($part->visible()) {
-			$form = $this->renderRKLabel($part);
+			$form = $this->renderLabel($part);
 			$form .= '<input type="text" class="form-control '.$part->classes().'" name="'.$part->name().'" id="'.$part->name().'" value="'.$part->value().'" placeholder="'.$part->placeholder().'" size="'.$part->size().'"';
 			if ($part->type() == 'number' OR $part->type() == 'tel' OR $part->type() == 'email') {
 				$form .= ' type="'.$part->type().'"';
@@ -98,39 +98,39 @@ HTML;
 		return $form;
 	}
 
-	function renderRKButton($part) {
+	function renderButton($part) {
 		if ($part->isDefault() == true) {
-			return '<button type="submit" class="btn btn-primary'.$part->classes().'" name="'.$part->name().'" id="'.$part->name().'" value="'.$part->name().'">'.$part->value().'</button>';
+			return '<button type="submit" class="btn btn-primary'.$part->classes().'" name="'.$part->name().'" id="'.$part->name().'" value="'.$part->name().'">'.$part->display().'</button>';
 		} else {
-			return '<button type="submit" class="btn btn-secondary'.$part->classes().'" name="'.$part->name().'" id="'.$part->name().'" value="'.$part->name().'">'.$part->value().'</button';
+			return '<button type="submit" class="btn btn-secondary'.$part->classes().'" name="'.$part->name().'" id="'.$part->name().'" value="'.$part->name().'">'.$part->display().'</button';
 		}
 	}
 
-	function renderRKPasswordField($part) {
+	function renderPasswordField($part) {
 		$form = '';
 		if ($part->visible() == true) {
-			$form = $this->renderRKLabel($part);
+			$form = $this->renderLabel($part);
 			$form .= '<input type="password" class="form-control'.$part->classes().'" name="'.$part->name().'" id="'.$part->name().'" value="'.$part->value().'"/>';
 		}
 		
 		return $form;
 	}
 
-	function renderRKNotesField($part) {
+	function renderNotesField($part) {
 		$form = '';
 
 		if ($this->visible == true) {
-			$form .= $this->renderRKLabel($part);
+			$form .= $this->renderLabel($part);
 			$form .= '<textarea class="form-control'.$part->classes().'" name="'.$part->name().'" id="'.$part->name().'" rows="'.$part->size().'">'.$part->value().'</textarea>';
 		}
 		
 		return $form;
 	}
 
-	function renderRKChoiceField($part) {
+	function renderChoiceField($part) {
 		$form = '';
 
-		$form .= $this->renderRKLabel($part);
+		$form .= $this->renderLabel($part);
 		
 		$form .= '<select class="form-select'.$part->classes().'" name="'.$part->name().'" id="'.$part->name().'">';
 		
