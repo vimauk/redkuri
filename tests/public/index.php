@@ -90,5 +90,5 @@ else
 	else {
 		echo '<style>body {font-family:sans-serif; color:#44f; font-weight:normal;}</style>';
 		echo '<h1>404 File Not Found</h1>';
-		echo '<p><i>Red Kuri Server</i></p>';
+		echo '<p><i>Red Kuri Framework</i></p>';
 	}
