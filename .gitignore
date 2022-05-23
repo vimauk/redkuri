@@ -2,6 +2,7 @@ settings.php
 providers.php
 adminer
 .htpasswd
+Archive/
 
 ##### Windows
 # Windows thumbnail cache files

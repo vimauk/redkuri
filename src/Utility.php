@@ -1,6 +1,6 @@
 <?php
 
-namespace RedKuri;
+namespace vima\RedKuri;
 
 class Utility {
 	static public function String($var) {

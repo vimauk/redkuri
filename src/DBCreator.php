@@ -1,5 +1,5 @@
 <?php
-namespace Redkuri;
+namespace vima\RedKuri;
 
 class DBCreator {
 	protected $db;

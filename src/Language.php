@@ -1,6 +1,6 @@
 <?php
 
-namespace RedKuri;
+namespace vima\RedKuri;
 
 class Language {
 	static protected $plural = array(

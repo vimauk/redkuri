@@ -1,6 +1,6 @@
 <?php
 
-namespace RedKuri;
+namespace vima\RedKuri;
 
 class BulmaPage extends HTMLPage {
 	protected $__content;

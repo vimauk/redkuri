@@ -2,8 +2,8 @@
     "name": "vima/redkuri",
 	"description": "A small PHP framework designed for Web Applications",
     "autoload": {
-        "psr-0": {
-            "RedKuri\\": "src/"
+        "psr-4": {
+            "vima\\RedKuri\\": "src/"
         }
     },
     "authors": [

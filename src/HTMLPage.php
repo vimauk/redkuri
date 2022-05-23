@@ -1,6 +1,6 @@
 <?php
 
-namespace RedKuri;
+namespace vima\RedKuri;
 
 class HTMLPage extends Page {
 	protected $__content;

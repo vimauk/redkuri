@@ -1,6 +1,6 @@
 <?php
 
-namespace RedKuri;
+namespace vima\RedKuri;
 
 class BootstrapPage extends HTMLPage {
 	protected $__content;

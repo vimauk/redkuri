@@ -1,6 +1,6 @@
 <?php
 
-namespace RedKuri;
+namespace vima\RedKuri;
 
 //echo $t = Math::base_encode('90000000123154141231230000100000000000102500250');
 //echo Math::base_decode($t);

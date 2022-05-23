@@ -1,8 +1,8 @@
 <?php
 
-use RedKuri\Core;
-use RedKuri\Utility;
-use RedKuri as RK;
+use vima\RedKuri\Core;
+use vima\RedKuri\Utility;
+use vima\RedKuri as RK;
 
 define ('BR', "<br>\n");
 

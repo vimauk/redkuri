@@ -1,11 +1,11 @@
 <?php
 
-use RedKuri as RK;
+use vima\RedKuri as RK;
 
 error_reporting(0);
 date_default_timezone_set('Europe/London');
 
-require_once __DIR__.'/../vendor/autoload.php';
+require_once __DIR__.'/../../vendor/autoload.php';
 
 require('../protected/settings.php');
 require(RK_REDKURIPATH.'startup.php');
