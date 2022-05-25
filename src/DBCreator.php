@@ -40,8 +40,8 @@ USE `$name`;\n\n";
 		return $this;
 	}
 	
-	function fid($name, $null=false) {
-		$this->tables .= "\t`$name` bigint(20) UNSIGNED ".($null?'NULL':'NOT NULL').",\n";
+	function fid($name, $defaultnull=false) {
+		$this->tables .= "\t`$name` bigint(20) UNSIGNED ".($defaultnull?'NULL':'NOT NULL').",\n";
 		return $this;
 	}
 
@@ -59,6 +59,11 @@ USE `$name`;\n\n";
 		return $this;
 	}
 	
+	function date($name, $defaultnull = true) {
+		$this->tables .= "\t`$name` datetime NULL DEFAULT ".($defaultnull?'NULL':'CURRENT_TIMESTAMP').",\n";
+		return $this;
+	}
+
 	function stamp($name, $defaultnull = true) {
 		$this->tables .= "\t`$name` timestamp NULL DEFAULT ".($defaultnull?'NULL':'CURRENT_TIMESTAMP').",\n";
 		return $this;
@@ -73,8 +78,8 @@ USE `$name`;\n\n";
 		return $this->string($name, 191);
 	}
 	
-	function text($name) {
-		$this->tables .= "\t`$name` text COLLATE utf8mb4_unicode_ci NOT NULL,\n";
+	function text($name, $defaultnull = true) {
+		$this->tables .= "\t`$name` text COLLATE utf8mb4_unicode_ci ".($defaultnull?'NULL':'NOT NULL').",\n";
 		return $this;
 	}
 	
@@ -111,8 +116,6 @@ USE `$name`;\n\n";
 
 		
 		$sql = substr($sql, 0, -1) . ");\n";
-		
-		echo $sql;
 		
 		$this->db->statement($sql);
 		return $this->db->insertId();

@@ -166,7 +166,7 @@ class BaseDBObject {
                 trigger_error('DB is NULL');
             }
             try {
-                $this->__db->statement('INSERT INTO '.$this->__table.' ('.implode(',', $names).') VALUES ('.implode(',', $questions).')', $values);
+                $this->__db->statement('INSERT INTO '.$this->__table.' (`'.implode('`,`', $names).'`) VALUES ('.implode(',', $questions).')', $values);
             } catch (PDOException $e) {
                 redkuri_error(0,'Error: '.$e->GetMessage());
             }

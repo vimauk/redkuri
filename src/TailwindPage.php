@@ -24,7 +24,7 @@ class TailwindPage extends HTMLPage {
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="fabtrackr">
     <meta name="description" content="fabtracker">
     <meta name="author" content="Anthony Fearn">
@@ -55,7 +55,7 @@ class TailwindPage extends HTMLPage {
     <title>$TITLE</title>
 	$CSS
 </head>
-<body class="container">
+<body class="h-screen bg-orange-400 dark:bg-slate-900 text-white mx-auto p-2">
 HTML;
 	}
 
